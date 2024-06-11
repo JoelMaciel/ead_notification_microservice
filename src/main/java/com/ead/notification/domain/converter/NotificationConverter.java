@@ -6,6 +6,7 @@ import com.ead.notification.domain.enums.NotificationStatus;
 import com.ead.notification.domain.models.NotificationModel;
 
 import java.time.OffsetDateTime;
+import java.util.UUID;
 
 public class NotificationConverter {
     private NotificationConverter() {
@@ -24,6 +25,7 @@ public class NotificationConverter {
 
     public static NotificationModel toEntity(NotificationCommandDTO notificationCommandDTO, NotificationStatus status) {
         return NotificationModel.builder()
+                .notificationId(UUID.randomUUID())
                 .userId(notificationCommandDTO.getUserId())
                 .title(notificationCommandDTO.getTitle())
                 .message(notificationCommandDTO.getMessage())
