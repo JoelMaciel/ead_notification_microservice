@@ -2,6 +2,7 @@ package com.ead.notification.domain.models;
 
 import com.ead.notification.domain.enums.NotificationStatus;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,8 +13,9 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Builder
 @Entity
-@Table(name = "NOTIFCATIONS")
+@Table(name = "NOTIFICATIONS")
 public class NotificationModel {
 
     @Id
