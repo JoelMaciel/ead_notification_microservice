@@ -27,5 +27,4 @@ public class NotificationConsumer {
     public void listen(@Payload NotificationCommandDTO notificationCommandDTO) {
         notificationService.save(notificationCommandDTO);
     }
-
 }
