@@ -17,8 +17,8 @@ public class NotificationDTO {
     private UUID userId;
     private String title;
     private String message;
-    private OffsetDateTime creationDate;
+    private String notificationStatus;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
-    private String notificationStatus;
+    private OffsetDateTime creationDate;
 }
